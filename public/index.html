@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>My Bot Army App</title>
-    <link rel="stylesheet" href="App.css">
-  </head>
-  <body>
-    <div id="root"></div>
+<head>
+  <meta charset="UTF-8">
+  <title>My Project</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- React scripts -->
-    <script
-      crossorigin
-      src="https://unpkg.com/react@17.0.2/umd/react.development.js"
-    ></script>
-    <script
-      crossorigin
-      src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"
-    ></script>
+  <main>
+    <form id="transaction-form">
+      <!-- Transaction Form Elements -->
+    </form>
 
-    <!-- Main app scripts -->
-    <script type="module" src="App.js"></script>
-<script type="module" src="BotCollection.js"></script>
-<script type="module" src="YourBotArmy.js"></script>
+    <div id="transaction-list">
+      <!-- Transaction List Elements -->
+    </div>
 
-  </body>
+    <input type="text" id="search-input" placeholder="Search Transactions">
+
+  </main>
+
+  <script src="transactionform.js"></script>
+  <script src="transactionlist.js"></script>
+  <script src="searchbar.js"></script>
+</body>
 </html>

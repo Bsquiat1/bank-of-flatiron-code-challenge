@@ -1,55 +1,55 @@
-import React, { useState } from "react";
-import BotCollection from "./BotCollection";
-import YourBotArmy from "./YourBotArmy";
-import axios from "axios";
-import "./App.css";
+import React, { useState, useEffect } from "react";
+import TransactionTable from "./components/TransactionTable";
+import TransactionForm from "./components/TransactionForm";
+import SearchBar from "./components/SearchBar";
 
 function App() {
-  const [bots, setBots] = useState([]);
-  const [enlistedBots, setEnlistedBots] = useState([]);
+  const [transactions, setTransactions] = useState([]);
 
-  // Fetch bots from server on component mount
-  React.useEffect(() => {
-    axios.get("http://localhost:3000/bots").then((response) => {
-      setBots(response.data);
-    });
+  useEffect(() => {
+    fetch("http://localhost:3000/transactions")
+      .then((res) => res.json())
+      .then((data) => setTransactions(data));
   }, []);
 
-  // Add bot to enlistedBots
-  const enlistBot = (bot) => {
-    if (!enlistedBots.includes(bot)) {
-      setEnlistedBots([...enlistedBots, bot]);
-    }
+  const addTransaction = (transaction) => {
+    setTransactions([...transactions, transaction]);
   };
 
-  // Remove bot from enlistedBots
-  const releaseBot = (bot) => {
-    const index = enlistedBots.indexOf(bot);
-    if (index > -1) {
-      const newEnlistedBots = [...enlistedBots];
-      newEnlistedBots.splice(index, 1);
-      setEnlistedBots(newEnlistedBots);
-    }
+  const deleteTransaction = (id) => {
+    setTransactions(transactions.filter((transaction) => transaction.id !== id));
   };
 
-  // Delete bot from server and enlistedBots
-  const deleteBot = (bot) => {
-    axios.delete(`http://localhost:3000/bots/${bot.id}`).then(() => {
-      const index = enlistedBots.indexOf(bot);
-      if (index > -1) {
-        const newEnlistedBots = [...enlistedBots];
-        newEnlistedBots.splice(index, 1);
-        setEnlistedBots(newEnlistedBots);
+  const searchTransactions = (searchTerm) => {
+    const filteredTransactions = transactions.filter((transaction) =>
+      transaction.description.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setTransactions(filteredTransactions);
+  };
+
+  const sortTransactions = (sortBy) => {
+    const sortedTransactions = [...transactions].sort((a, b) => {
+      if (a[sortBy] < b[sortBy]) {
+        return -1;
       }
-      const newBots = bots.filter((b) => b.id !== bot.id);
-      setBots(newBots);
+      if (a[sortBy] > b[sortBy]) {
+        return 1;
+      }
+      return 0;
     });
+    setTransactions(sortedTransactions);
   };
 
   return (
-    <div className="App">
-      <BotCollection bots={bots} enlistBot={enlistBot} />
-      <YourBotArmy enlistedBots={enlistedBots} releaseBot={releaseBot} deleteBot={deleteBot} />
+    <div className="container">
+      <h1>Transaction Tracker</h1>
+      <TransactionForm addTransaction={addTransaction} />
+      <SearchBar searchTransactions={searchTransactions} />
+      <TransactionTable
+        transactions={transactions}
+        deleteTransaction={deleteTransaction}
+        sortTransactions={sortTransactions}
+      />
     </div>
   );
 }
