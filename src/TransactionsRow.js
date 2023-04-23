@@ -13,4 +13,4 @@ function TransactionRow(props) {
   );
 }
 
-export default TransactionsRow;
+export default TransactionRow;

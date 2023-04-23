@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import TransactionsTable from "./TransactionTable";
 import TransactionForm from "./TransactionForm";
 import SearchBar from "./SearchBar";
-import TransactionsRow from "./TransactionsRow";
+import TransactionRow from "./TransactionsRow";
 
 function App() {
   const [transactions, setTransactions] = useState([]);
