@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 
 function AddTransactionForm(props) {
-  const [name, setName] = useState('');
+  const [description, setDescription] = useState('');
   const [amount, setAmount] = useState('');
+  const [date, setDate] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
     const newTransaction = {
-      name: name,
-      amount: parseFloat(amount)
+      description: description,
+      amount: parseFloat(amount),
+      date: date
     };
 
     props.onAddTransaction(newTransaction);
@@ -18,12 +20,16 @@ function AddTransactionForm(props) {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" value={name} onChange={(event) => setName(event.target.value)} />
+        <label htmlFor="description">Description:</label>
+        <input type="string" id="description" value={description} onChange={(event) => setDescription(event.target.value)} />
       </div>
       <div>
         <label htmlFor="amount">Amount:</label>
         <input type="number" id="amount" value={amount} onChange={(event) => setAmount(event.target.value)} />
+      </div>
+      <div>
+        <label htmlFor="date">Date:</label>
+        <input type="date" id="date" value={date} onChange={(event) => setDate(event.target.value)} />
       </div>
       <div>
         <button type="submit">Add Transaction</button>
