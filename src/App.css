@@ -85,20 +85,8 @@ td:last-child {
   text-align: center;
 }
 
-.delete-btn {
-  padding: 5px 10px;
-  background-color: #cc0000;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-}
 
-.delete-btn:hover {
-  background-color: #a30000;
-  color: #fff;
-}
+
 .SearchBar {
   display: flex;
   align-items: center;
@@ -126,9 +114,22 @@ td:last-child {
 
 .SearchBar button {
   padding: 10px;
-  background-color: #af1234;
+  background-color: #12af24;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
+.delete-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+}
+

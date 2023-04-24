@@ -33,15 +33,24 @@ function App() {
       .then(data => setTransactions([...transactions, data]))
       .catch(error => console.log(error));
   };
-
+  const handleDeleteTransaction = (id) => {
+    fetch(`http://localhost:3000/transactions/${id}`, {
+      method: 'DELETE'
+    })
+      .then(response => response.json())
+      .then(data => {
+        const updatedTransactions = transactions.filter(transaction => transaction.id !== id);
+        setTransactions(updatedTransactions);
+      })
+      .catch(error => console.log(error));
+  };
 
   return (
-    <div>
+    <div className="App">
       <h1>Bank Transactions</h1>
       <SearchBar onSearch={handleSearch} />
-      <TransactionTable transactions={transactions} />
+      <TransactionTable transactions={transactions} onDeleteTransaction={handleDeleteTransaction} />
       <AddTransactionForm onAddTransaction={handleAddTransaction} />
-      
     </div>
   );
 }
