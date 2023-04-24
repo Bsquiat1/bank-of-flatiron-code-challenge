@@ -6,19 +6,19 @@ To get started with the app, first clone the repository:
 
 bash
 Copy code
-git clone https://github.com/your-username/bank-transactions-react-app.git
+git clone https://github.com/Bsquiat1/phase-2-code-challenge
 Then, navigate to the project directory and install the dependencies:
 
 bash
 Copy code
-cd bank-transactions-react-app
+cd phase-2-code-challenge
 npm install
 Next, start the local server for the JSON DB by running the following command:
 
 bash
 Copy code
 json-server --watch db.json
-The server will be running at http://localhost:8001/transactions. This is the endpoint from which the app will fetch the data.
+The server will be running at http://localhost:3000/transactions. This is the endpoint from which the app will fetch the data.
 
 Finally, start the app:
 
