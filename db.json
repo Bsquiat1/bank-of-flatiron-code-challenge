@@ -43,6 +43,13 @@
       "amount": -17.59
     },
     {
+      "id": 7,
+      "date": "2019-12-07",
+      "description": "Birthday Check from Grandma",
+      "category": "Gift",
+      "amount": 50
+    },
+    {
       "id": 8,
       "date": "2019-12-09",
       "description": "Lyft Ride",
@@ -71,158 +78,27 @@
       "amount": -116.39
     },
     {
+      "id": 12,
+      "date": "2019-12-17",
+      "description": "Venmo, Pay Roommate for Rent",
+      "category": "Housing",
+      "amount": -975
+    },
+    {
+      "date": "2022-07-09",
+      "description": "Office lunch",
+      "category": "Food",
+      "amount": "2000",
+      "id": 13
+    },
+    {
       "date": "2022-07-09",
       "description": "Office lunch Wednesday",
       "category": "Food",
       "amount": "3000",
       "id": 14
-    },
-    {
-      "date": "2019-12-01",
-      "description": "Paycheck from Bob's Burgers",
-      "category": "Income",
-      "amount": "1000",
-      "id": 15
-    },
-    {
-      "date": "2019-12-01",
-      "description": "Paycheck from Bob's Burgers",
-      "category": "Income",
-      "amount": "1000",
-      "id": 16
-    },
-    {
-      "date": "2019-12-01",
-      "description": "Paycheck from Bob's Burgers",
-      "category": "Income",
-      "amount": "1000",
-      "id": 17
-    },
-    {
-      "date": "2019-12-01",
-      "description": "Paycheck from Bob's Burgers",
-      "category": "Income",
-      "amount": "1000",
-      "id": 18
-    },
-    {
-      "date": "2019-12-01",
-      "description": "Paycheck from Bob's Burgers",
-      "category": "Income",
-      "amount": "1000",
-      "id": 19
-    },
-    {
-      "date": "2019-12-01",
-      "description": "Paycheck from Bob's Burgers",
-      "category": "Income",
-      "amount": "1000",
-      "id": 20
-    },
-    {
-      "date": "2019-12-01",
-      "description": "Paycheck from Bob's Burgers",
-      "category": "Income",
-      "amount": "1000",
-      "id": 21
-    },
-    {
-      "date": "2019-12-01",
-      "description": "Paycheck from Bob's Burgers",
-      "category": "Income",
-      "amount": "1000",
-      "id": 22
-    },
-    {
-      "date": "2019-12-01",
-      "description": "Paycheck from Bob's Burgers",
-      "category": "Income",
-      "amount": "1000",
-      "id": 23
-    },
-    {
-      "date": "2019-12-01",
-      "description": "Paycheck from Bob's Burgers",
-      "category": "Income",
-      "amount": "1000",
-      "id": 24
-    },
-    {
-      "date": "2019-12-01",
-      "description": "Paycheck from Bob's Burgers",
-      "category": "Income",
-      "amount": "1000",
-      "id": 25
-    },
-    {
-      "date": "2019-12-01",
-      "description": "Paycheck from Bob's Burgers",
-      "category": "Income",
-      "amount": "1000",
-      "id": 26
-    },
-    {
-      "date": "2019-12-01",
-      "description": "Paycheck from Bob's Burgers",
-      "category": "Income",
-      "amount": "1000",
-      "id": 27
-    },
-    {
-      "date": "2019-12-01",
-      "description": "Paycheck from Bob's Burgers",
-      "category": "Income",
-      "amount": "1000",
-      "id": 28
-    },
-    {
-      "date": "2019-12-06",
-      "description": "Chipotle",
-      "category": "Food",
-      "amount": "-17.59",
-      "id": 30
-    },
-    {
-      "date": "2019-12-06",
-      "description": "Chipotle",
-      "category": "Food",
-      "amount": "-17.59",
-      "id": 33
-    },
-    {
-      "date": "2019-12-06",
-      "description": "Chipotle",
-      "category": "Food",
-      "amount": "-17.59",
-      "id": 34
-    },
-    {
-      "date": "2019-12-06",
-      "description": "Chipotle",
-      "category": "Food",
-      "amount": "-17.59",
-      "id": 35
-    },
-    {
-      "date": "2019-12-06",
-      "description": "Chipotle",
-      "category": "Food",
-      "amount": "-17.59",
-      "id": 36
-    },
-    {
-      "date": "2019-12-06",
-      "description": "Chipotle",
-      "category": "Food",
-      "amount": "-17.59",
-      "id": 37
-    },
-    {
-      "date": "2019-12-06",
-      "description": "Chipotle",
-      "category": "Food",
-      "amount": "-17.59",
-      "id": 38
     }
   ]
-}
+ }
+ 
+ 
