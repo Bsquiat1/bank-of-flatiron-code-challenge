@@ -42,7 +42,7 @@ function AddTransactionForm(props) {
       
       <div>
         <button type="submit">Add Transaction</button>
-        <button type="button" onClick={props.onCancel}>Cancel</button>
+        
       </div>
     </form>
   );

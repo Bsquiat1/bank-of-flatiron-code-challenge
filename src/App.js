@@ -12,6 +12,7 @@ function App() {
   const handleSearch = (query) => {
     setSearchQuery(query);
   };
+  
   const [transactions, setTransactions] = useState([]);
 
   useEffect(() => {
@@ -44,6 +45,7 @@ function App() {
       })
       .catch(error => console.log(error));
   };
+  
 
   return (
     <div className="App">
