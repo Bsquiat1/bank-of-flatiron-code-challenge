@@ -8,7 +8,7 @@ function SearchBar(props) {
 
   return (
     <div>
-      <label htmlFor="search">Search by amount:</label>
+      <label htmlFor="search">Search:</label>
       <input
         id="search"
         type="text"
