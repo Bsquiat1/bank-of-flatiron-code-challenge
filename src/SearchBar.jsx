@@ -7,7 +7,7 @@ function SearchBar(props) {
   };
 
   return (
-    <div>
+    <div className="SearchBar">
       <label htmlFor="search">Search:</label>
       <input
         id="search"
@@ -15,8 +15,10 @@ function SearchBar(props) {
         onChange={handleSearch}
         placeholder="Enter search query"
       />
+      <button type="button">Go</button>
     </div>
   );
 }
+
 
 export default SearchBar;

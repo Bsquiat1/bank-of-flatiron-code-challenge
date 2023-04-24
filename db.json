@@ -97,6 +97,12 @@
       "category": "Food",
       "amount": "3000",
       "id": 14
+    },
+    {
+      "description": "",
+      "amount": null,
+      "date": "",
+      "id": 15
     }
   ]
 }
